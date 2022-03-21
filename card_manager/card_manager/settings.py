@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-(8!r!^9ax%w77dhyo3q3=6%&$*p4tpyfcm8c%s9fguf-0l^=a@'
+SECRET_KEY = 'django-insecure-92(n^^5@*hid$%*a9$1=a5h(+c=bk+!zzbdut(+i))+*%a^^ku'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -38,9 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'cardBase.apps.CardbaseConfig',
     'rest_framework',
-    'cardUsers.apps.CardusersConfig'
+    'card_base.apps.CardBaseConfig',
+    'card_users.apps.CardUsersConfig',
+    'card_api.apps.CardApiConfig',
 ]
 
 MIDDLEWARE = [
@@ -127,6 +128,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR/'static'
 ]
+
 MEDIA_URL = '/images/'
 MEDIA_ROOT = [
     BASE_DIR/'static/images'

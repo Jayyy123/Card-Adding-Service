@@ -1,0 +1,70 @@
+{% load static %}
+
+<header class="header">
+    <nav class="navbar">
+        <div class="container">
+            <h2>Card-it</h2>
+
+            {% if request.user.is_authenticated %}
+
+            <div class ="middle">
+                <div class="user-home home">
+                    <h1>⌂</h1>
+                    <div class="select"></div>
+                    <h4>Home</h4>
+                </div>
+                <div class="account">
+                    <img src="" alt="" id="icon">
+                    <div class="select"></div>
+                    <h4>Account</h4>
+                </div>
+                <div class="about">
+                    <h1>📖</h1>
+                    <div class="select"></div>
+                    <h4>About</h4>
+                </div>
+                <div class="contact">
+                    <h1 id="h1">📞<h1>
+                    <div class="select"></div>
+                    <h4>Contact</h4>
+                </div>
+            </div>
+
+            <div class="login">
+                    <h1>🔻</h1>
+                    <div class="select"></div>
+                    <h4>Logout</h4>
+            </div>
+
+            {% else %}
+            <div class="middle">
+                <div class="home">
+                    <h1>⌂</h1>
+                    <div class="selecth"></div>
+                    <h4>Home</h4>
+                </div>
+
+                <div class="about">
+                    <h1>📖</h1>
+                    <div class="selecta"></div>
+                    <h4 id = "ah4">About</h4>
+                </div>
+
+                <div class="contact">
+                    <h1 id="h1">📞<h1>
+                        <div class="selectc"></div>
+                    <h4>Contact</h4>
+                </div>
+            </div>
+
+            <div class="login">
+                <h1>👤</h1>
+                <div class="selectl"></div>
+                <h4>Login</h4>
+            </div>
+            
+            {% endif %}
+
+        </div>
+    </nav>
+</header>
